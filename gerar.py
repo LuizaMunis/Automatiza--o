@@ -5,7 +5,6 @@ class PDF(FPDF):
         pass  
 
 for i in range(1,32):
-    print(i)
     pdf = PDF()  # Cria uma nova instância do PDF para cada iteração
     pdf.add_page()
 
