@@ -4,7 +4,7 @@ class PDF(FPDF):
     def header(self):
         pass  
 
-for i in range(1,32):
+for i in range(1,31):
     pdf = PDF()  # Cria uma nova instância do PDF para cada iteração
     pdf.add_page()
 
@@ -21,8 +21,8 @@ for i in range(1,32):
 
     # Adiciona o texto do link centralizado horizontalmente
     pdf.set_y(170)  # Ajusta a posição vertical para onde o link será inserido
-    link = f'https://www.in.gov.br/leiturajornal?data={i:02d}-04-2018'
+    link = f'https://www.in.gov.br/leiturajornal?data={i:02d}-09-2018'
     pdf.cell(0, 10, 'Clique aqui', ln=True, align='C', link=link)
-    nome_pdf = f"janeiro_{i}"
-    pdf.output(f"./janeiro/{nome_pdf}.pdf")
+    nome_pdf = f"do-{i:02d}-09-2018"
+    pdf.output(f"./setembro-2018/{nome_pdf}.pdf")
     print(f"PDF gerado: {nome_pdf}.pdf")
